@@ -1,0 +1,82 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int large(int a[],int n)
+{
+	int i,max=0;
+	
+	for(i=0;i<n;i++)
+	{
+		if(max<a[i])
+		{
+			max=a[i];
+		}
+	}
+	return max;
+}
+
+int small(int a[],int n)
+{
+	int i,min=100;
+	for(i=0;i<n;i++)
+	{
+		if(min>a[i])
+		{
+			min=a[i];
+		}
+	}
+	return min;
+}
+
+int asss(int a[],int n)
+{
+	int i=0,temp=0;
+	for(i=0;i<n;i++)
+	{
+		for(int j=0;j<n;j++)
+		{
+			if(a[i]>a[j])
+			{
+				temp=a[i];
+				a[i]=a[j];
+				a[j]=temp;
+				
+			}
+		}
+	}
+	return a[n];
+}
+int main()
+{
+	int n,k,i,j;
+	while(1)
+	{
+		cin>>n;
+		if(n>=0&&n<=100)
+		 break;
+	}
+	int a[100];
+	cout<<"now enter element for an array";
+	for(i=0;i<n;i++)
+	cin>>a[i];
+	
+	for(i=0;i<n;i++)
+	cout<<"yout entered "<<a[i]<<"\n";
+	cout<<"\nElemet:"<<a[109]<<endl;
+	int l=large(a,n);
+	cout<<"largest element is \n"<<l<<"\n";
+	
+	int o=small(a,n);
+	cout<<"smallest element is \n"<<o<<"\n";
+	
+	int ass=asss(a,n);
+	cout<<"Dessending array is \n";
+	for(i=0;i<n;i++)
+	cout<<a[i]<<"  ";
+	cout<<"\n";
+	
+	cout<<"Assending array is \n";
+	for(i=n-1;i>=0;i--)
+	cout<<a[i]<<"  ";
+	cout<<"\n";
+}
