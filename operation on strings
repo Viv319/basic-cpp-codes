@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int i;
+	string s;
+	
+	getline (cin,s);
+	//getline function is use to take input for an string
+	
+	int a =s.length();
+	cout<<" length of string is "<<a<<"\n";
+	
+	string s1;
+	getline(cin,s1);
+	
+	int b=s1.length();
+	cout<<" length of string is "<<b<<"\n";
+	
+	transform(s.begin(),s.end(),s.begin(),::tolower);
+	transform(s1.begin(),s1.end(),s1.begin(),::tolower);
+	
+	cout<< "first string \n "<<s<<"\n second string \n"<<s1;
+	
+	
+	if(s.compare(s1)==0)
+	cout<< "\nfirst string is equal to second \n";
+	else
+	cout<< "\nfirst string is not equal to second \n";
+	
+	//append function is used to concatinate two different strings
+	string s2;
+	s2.append(s);
+	s2.append(s1);
+	cout<<"contuction of two string \n"<<s2<<"\n";
+}
