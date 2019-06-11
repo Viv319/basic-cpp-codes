@@ -1,0 +1,70 @@
+//wap to print 1234 as one two three four
+
+#include<bits/stdc++.h>
+using namespace std;
+
+//recursive function to reverese a number 
+int rev(int a,int b,int c)
+{
+	if(a>0)
+	{
+	   c=a%10;
+	   a=a/10;
+	   b=b*10+c;
+	   rev(a,b,c);
+    }
+    else
+    {
+    	return b;
+    }
+}
+int main()
+{
+	int n,a,b,h,i;
+	cin>>a;
+	h=rev(a,0,0);
+	
+  //after reversing do slicing and print it from backside 
+	while(h>0)
+	{
+		i=h%10;
+		h=h/10;
+	    switch(i)
+	    {
+	    	case 1:
+	    		cout<<"ONE ";
+	    		break;
+	    	case 2:
+	    		cout<<"TWO ";
+	    		break;
+	    	case 3:
+	    		cout<<"THREE ";
+	    		break;
+	    	case 4:
+	    		cout<<"FOUR ";
+	    		break;
+	    	case 5:
+	    		cout<<"FIVE ";
+	    		break;
+	    	case 6:
+	    		cout<<"SIX ";
+	    		break;
+	    	case 7:
+	    		cout<<"SEVEN ";
+	    		break;
+	    	case 8:
+	    		cout<<"EIGHT ";
+	    		break;
+	    	case 9:
+	    		cout<<"NINE ";
+	    		break;
+	    	case 0:
+	    		cout<<"ZERO ";
+	    		break;
+	    	default:
+	    		cout<<"you entered something wrong \n";
+	    		break;
+	    }
+    }
+	
+}
