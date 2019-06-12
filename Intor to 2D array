@@ -1,0 +1,72 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int i,j,s,temp=0;
+	cin>>s;
+	int a[s][s],b[s][s],c[s][s];
+	
+	cout<<"enter elements for first array";
+	for(i=0;i<s;i++)
+	{
+		for(j=0;j<s;j++)
+		{
+			cin>>a[i][j];
+		}
+	}
+	
+	cout<<"enter elements for second array";
+	for(i=0;i<s;i++)
+	{
+		for(j=0;j<s;j++)
+		{
+			cin>>b[i][j];
+		}
+	}
+	
+	for(i=0;i<s;i++)
+	{
+		for(j=0;j<s;j++)
+		{
+			if(i==j)
+			{
+				//temp=a[i][j]+b[i][j];
+				//a[i][j]=temp;
+				c[i][j]=a[i][j]+b[i][j];
+			}
+		}
+	}
+	
+	for(i=0;i<s;i++)
+	{
+		for(j=0;j<s;j++)
+		{
+			if(i==s-1&&j==0)
+			{
+			  //temp=a[i][j]+b[i][j];
+			  //a[i][j]=temp;
+			  c[i][j]=a[i][j]+b[i][j];
+		    }
+			
+			if(i==0&&j==s-1)
+			{
+			  //temp=a[i][j]+b[i][j];
+			  //a[i][j]=temp;
+			  c[i][j]=a[i][j]+b[i][j];
+		    }
+		    
+		}
+	}
+	
+	cout<<"\narray\n";
+	for(i=0;i<s;i++)
+	{
+		for(j=0;j<s;j++)
+		{
+			cout<<c[i][j]<<"  ";
+		}
+		cout<<"\n";
+	}
+	return 0;
+}
