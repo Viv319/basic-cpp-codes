@@ -1,0 +1,59 @@
+#include<bits/stdc++.h>
+ using namespace std;
+ 
+ class student 
+ {
+ 	private:
+ 	string name,ph;
+ 	int marks,rollno;
+ 	public:
+ 		void insert()
+ 		{
+ 			
+ 			cout<<"enter name\n";
+ 			cin>>name;
+ 			
+ 			cout<<"enter ph\n";
+ 			cin>>ph;
+ 			
+ 			cout<<"enter marks\n";
+ 			cin>>marks;
+			
+			cout<<"enter roll no\n"; 
+			 cin>>rollno;
+ 		}
+		 	void show()
+ 			{
+ 			cout<<rollno<<"\t"<<name<<"\t"<<ph<<"\t"<<marks;
+ 			cout<<endl;
+ 		}
+ 		void search(string s)
+ 		{
+ 				if(this->name==s){
+ 				
+ 					cout<<"found  "<<s;
+ 					cout<<"\n Enter updatable PhoneNo and Marks:";
+ 					cin>>ph>>marks;
+ 				}
+ 		}
+ };
+ 
+ int main()
+ {
+ 	int i;
+ 	string d;
+ 	student a[5];
+ 	for(i=0;i<2;i++)
+ 		a[i].insert();
+ 	cout<<endl<<"R.No\tName\tPh.No\tMarks"<<endl;
+ 	for(i=0;i<2;i++)
+ 		a[i].show();
+ 	cout<<"enter name to be searched \n";
+ 	cin>>d;
+ 	for(i=0;i<2;i++)
+ 		a[i].search(d);
+ 	cout<<"\n After update...";
+ 	cout<<endl<<"R.No\tName\tPh.No\tMarks"<<endl;
+ 	for(i=0;i<2;i++)
+ 		a[i].show();
+ }                
