@@ -31,8 +31,6 @@ int main()
 		{
 			if(i==j)
 			{
-				//temp=a[i][j]+b[i][j];
-				//a[i][j]=temp;
 				c[i][j]=a[i][j]+b[i][j];
 			}
 		}
@@ -44,15 +42,11 @@ int main()
 		{
 			if(i==s-1&&j==0)
 			{
-			  //temp=a[i][j]+b[i][j];
-			  //a[i][j]=temp;
 			  c[i][j]=a[i][j]+b[i][j];
 		    }
 			
 			if(i==0&&j==s-1)
 			{
-			  //temp=a[i][j]+b[i][j];
-			  //a[i][j]=temp;
 			  c[i][j]=a[i][j]+b[i][j];
 		    }
 		    
